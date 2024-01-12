@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color: aqua;
+            border: 3px solid green;
+        }
+        span{
+            background-color: mintcream;
+            border: 3px solid rgb(102, 40, 121);
+        }
+        .grotetekst{
+            font-size: 200%;
+            color: blue;
+        }
+        #lijst{
+            font-size: 200%;
+        }
+        #lijst1{
+            font-size: 200%;
+        }
+
+    </style>
+    <script>
+        function add(){
+        let invoer1 = parseInt(document.getElementById("invoer1").value);
+        let invoer2 = parseInt(document.getElementById("invoer2").value);
+        let out = invoer1 + invoer2
+        alert(out)
+        }
+
+        function subtract(){
+        let invoer1 = parseInt(document.getElementById("invoer1").value);
+        let invoer2 = parseInt(document.getElementById("invoer2").value);
+        let out = invoer1 - invoer2
+        alert(out)
+        }
+
+        function multiply(){
+        let invoer1 = parseInt(document.getElementById("invoer1").value);
+        let invoer2 = parseInt(document.getElementById("invoer2").value);
+        let out = invoer1 * invoer2
+        alert(out)
+        }
+
+        function divide(){
+        let invoer1 = parseInt(document.getElementById("invoer1").value);
+        let invoer2 = parseInt(document.getElementById("invoer2").value);
+        let out = invoer1 / invoer2
+        alert(out)
+        }
+
+
+        let width = 50
+        
+        function enlarge(){
+            width += 50
+            document.getElementById("img1").style.borderWidth = width + 'px'
+        }
+
+        function smaller(){
+            width -= 50
+            document.getElementById("img1").style.borderWidth = width + 'px'
+        }
+
+        function clear_list(){
+            let currentlijst = document.getElementById('lijst');
+            currentlijst.innerHTML = '';
+        }
+        add()
+        subtract()
+        multiply()
+        divide()
+
+    </script>
+</head>
+<body>
+    <h1>
+        Dit is header 1
+    </h1>
+
+    <span style="color: red;font-size: 300%; border: 10px solid magenta"> <!-- inline -->
+        Dit is de eerste span
+    </span>
+
+    <span> <!-- inline -->
+        Dit is de tweede span
+    </span>
+
+    <p style="color: tomato;font-size: 300%;">
+        Dit is paragraph 1
+    </p>
+
+    <p class = "grotetekst">
+        Dit is paragraph 2
+    </p>
+
+    <p class = "grotetekst">
+        Dit is paragraph 3
+    </p>
+
+
+    <ul id="lijst">
+        <li> punt 1</li> 
+        <li> punt 2</li>
+        <li> punt 3</li> 
+        <li> punt 4</li>
+    </ul>
+
+    <button type="button" onclick="clear_list()">
+        Empty
+    </button>
+
+
+
+    <input type="number" id="invoer1">
+    <input type="number" id="invoer2">
+
+    <button type="button" onclick="add()">
+    Add
+    </button>
+
+    <button type="button" onclick="subtract()">
+    Subtract
+    </button>
+
+    <button type="button" onclick="multiply()">
+    Multiply
+    </button>
+
+    <button type="button" onclick="divide()">
+    Divide
+    </button>
+
+
+    <button type="button" onclick="enlarge()">
+        enlarge
+    </button>
+   
+    <button type="button" onclick="smaller()">
+        smaller
+    </button>
+ <img id ="img1" src="https://www.veggipedia.nl/assets/Uploads/Products/83774c9e7c/Coeur-de-Boeuf-tomaten-groente-veggipedia.jpg" style = "border: 30px solid rgb(102, 40, 121)"> </img>
+
+</body>
+</html>
